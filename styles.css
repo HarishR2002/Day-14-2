@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light gray background for the whole page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #ffffff; /* White background for the calculator */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.display {
+    background-color: #333; /* Dark background for the display */
+    color: #fff;
+    font-size: 2.5em;
+    padding: 20px;
+    text-align: right;
+    border-bottom: 1px solid #888;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.button-row {
+    display: flex;
+}
+
+.button-row button {
+    background-color: #e0e0e0; /* Light gray background for buttons */
+    border: none; /* Remove button borders */
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+    border-radius: 0; /* Remove rounded corners */
+    outline: none; /* Remove button outline */
+    flex: 1; /* Make buttons stretch to fill available space */
+}
+
+.button-row button:hover {
+    background-color: #d0d0d0;
+}
+
+.button-row button:active {
+    background-color: #c0c0c0;
+}
+
+.equal {
+    background-color: #ff9500;
+    color: white;
+    flex: 1; /* Make the equal button fill the available space */
+}
+
+.equal:hover {
+    background-color: #e08900;
+}
+
+.zero {
+    flex: 2; /* Make the '0' button span two columns */
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
